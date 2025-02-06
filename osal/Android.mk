@@ -44,6 +44,7 @@ LOCAL_C_INCLUDES += $(EXYNOS_OMX_INC)/khronos
 else
 ifeq ($(BOARD_USE_ANDROID), true)
 LOCAL_C_INCLUDES += $(ANDROID_MEDIA_INC)/openmax
+LOCAL_HEADER_LIBRARIES := media_plugin_headers
 endif
 endif
 
@@ -83,6 +84,7 @@ LOCAL_C_INCLUDES += $(EXYNOS_OMX_INC)/khronos
 else
 ifeq ($(BOARD_USE_ANDROID), true)
 LOCAL_C_INCLUDES += $(ANDROID_MEDIA_INC)/openmax
+LOCAL_HEADER_LIBRARIES := media_plugin_headers
 endif
 endif
 
@@ -195,6 +197,7 @@ ifeq ($(BOARD_USE_ANDROID), true)
 LOCAL_C_INCLUDES += \
 	$(ANDROID_MEDIA_INC)/hardware \
 	$(TOP)/system/core/libion/include
+LOCAL_HEADER_LIBRARIES := media_plugin_headers
 endif
 
 ifeq ($(BOARD_USE_KHRONOS_OMX_HEADER), true)
