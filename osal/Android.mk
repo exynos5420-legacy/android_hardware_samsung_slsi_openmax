@@ -190,6 +190,10 @@ LOCAL_C_INCLUDES := \
 	$(TOP)/hardware/samsung_slsi/$(TARGET_BOARD_PLATFORM)/include \
 	$(TOP)/hardware/samsung_slsi/exynos/include
 
+ifneq ($(TARGET_SPECIFIC_HEADER_PATH),)
+LOCAL_C_INCLUDES += $(addprefix $(TOP)/, $(TARGET_SPECIFIC_HEADER_PATH))
+endif
+
 LOCAL_ADDITIONAL_DEPENDENCIES := \
 	$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 
